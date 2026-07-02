@@ -87,15 +87,15 @@ const config: Config = {
       },
       items: [
         {
+          to: '/showcase',
+          label: 'Start',
+          position: 'left',
+        },
+        {
           type: 'docSidebar',
           sidebarId: 'docsSidebar',
           position: 'left',
           label: 'Docs',
-        },
-        {
-          to: '/showcase',
-          label: '✨ Showcase',
-          position: 'left',
         },
         {
           to: '/blog',

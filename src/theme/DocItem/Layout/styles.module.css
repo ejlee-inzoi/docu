@@ -1,0 +1,21 @@
+.docItemContainer header + *,
+.docItemContainer article > *:first-child {
+  margin-top: 0;
+}
+
+@media (min-width: 997px) {
+  .docItemCol {
+    max-width: 75% !important;
+  }
+
+  /* MkDocs-style integrated ToC: place the table of contents on the left,
+     right next to the site navigation sidebar (Wiki subtree excluded). */
+  .tocColLeft {
+    order: -1;
+    border-right: 1px solid var(--ifm-toc-border-color);
+  }
+
+  .tocLeftRow .docItemCol {
+    padding-left: 2rem;
+  }
+}
