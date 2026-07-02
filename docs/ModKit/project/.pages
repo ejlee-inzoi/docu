@@ -1,0 +1,6 @@
+# docs/Modkit/project/.pages 파일
+nav:
+  - CAZ: CAZ
+  - Build: Build
+  - UI: UIMod
+  - DataAsset: dataasset.md

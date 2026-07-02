@@ -1,0 +1,41 @@
+## 🎛️ Enum: EB1MissionCondition
+
+Defines conditions used to evaluate mission objectives, such as currency, interaction counts, site visits, and emotions.
+
+- **None**: No condition.  
+- **GetCurrency**: Acquire a specific type of currency.  
+- **HaveCurrency**: Own a specific type of currency.  
+- **HaveCurrencyExactly**: Own exactly a specified amount of currency.  
+- **HaveCurrencyUnder**: Own less than a specified amount of currency.  
+- **InteractionBagCount**: Perform a number of interactions with a specific InteractionBag.  
+- **InteractionCount**: Perform a number of interactions with a specific Interaction.  
+- **ActionTime**: Spend time in a specific interaction action.  
+- **SkillLevel**: Reach a certain skill level.  
+- **HaveJob**: Have a specific job.  
+- **HaveJobRank**: Have a specific job rank.  
+- **RelationshipCount**: Maintain a number of specific relationships.  
+- **CompleteAmbitionMission**: Complete a mission related to an ambition.  
+- **BuyObject**: Purchase an object with a specific tag.  
+- **InteractionBagCountInSite**: Count interactions at a specific site with a specific InteractionBag.  
+- **InteractionBagTimeInSite**: Time spent interacting in a specific site with a specific InteractionBag.  
+- **EnterSiteCount**: Number of times the site has been entered.  
+- **InteractionBagTagCountInSiteTag**: Count interactions in sites with a specific tag and InteractionBag tags.  
+- **InteractionBagTagTimeInSiteTag**: Time spent interacting in sites with specific site and InteractionBag tags.  
+- **EnterSiteTagCount**: Number of entries into sites with a specific tag.  
+- **InteractionBagCountDuringEmotion**: Count interactions under a specific emotion state (InteractionBag-based).  
+- **InteractionCountDuringEmotion**: Count interactions under a specific emotion state (interaction-based).  
+- **InteractionBagCountAtFamilyRelationshipType**: Count interactions with characters of a family relationship type (InteractionBag-based).  
+- **InteractionCountAtFamilyRelationshipType**: Count interactions with characters of a family relationship type (interaction-based).  
+- **HaveFamilyCount**: Have a specific number of family members.  
+- **HasChildMarried**: Have a child who is married.  
+- **HaveEmploymentForm**: Have a specific employment form.  
+- **UpdateRankCount**: Number of job rank updates.  
+- **TakeASubway**: Number of times subway has been used.  
+- **SkillsReachedLevel**: Number of skills that reached a target level.  
+- **SitePrice**: Compare price of current residence.  
+- **SiteSize**: Compare size of current residence.  
+- **FamilyLoveDuringDay**: Maintain family love for a number of days.  
+- **AddBuffCount**: Add a specific buff a number of times.  
+- **AddEntityTagCount**: Add a specific EntityTag a number of times.  
+- **MissionClearCount**: Number of missions cleared (World Mission only).  
+- **GamePlayTime**: Total gameplay time.

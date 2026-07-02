@@ -1,0 +1,7 @@
+# docs/Wiki/.pages
+# `...` keeps the existing wiki entries (script-condition, script-execution,
+# StructGuide, ...) in their default order; CLI is pinned to the end since
+# it's the newest section.
+nav:
+  - ...
+  - CLI

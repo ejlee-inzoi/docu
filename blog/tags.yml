@@ -1,0 +1,14 @@
+release:
+  label: Release
+  permalink: /release
+  description: 릴리스 및 업데이트 소식
+
+modkit:
+  label: ModKit
+  permalink: /modkit
+  description: ModKit 제작 관련 글
+
+docs:
+  label: Docs
+  permalink: /docs
+  description: 문서 사이트 관련 글

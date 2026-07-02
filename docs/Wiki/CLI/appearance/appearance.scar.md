@@ -1,0 +1,38 @@
+# appearance.scar
+
+Overview
+==
+
+- Manage face scar. action=get (default): show current info. add: apply random. change: switch to different. remove: remove scar.
+
+Metadata
+==
+
+| Field | Value |
+|---|---|
+| Display | Scar |
+| Category | `appearance` |
+| Access | `ScriptCheat` |
+| Scope | `B2Authority` |
+| Tags | Experimental |
+| Aliases | — |
+
+Parameters
+==
+
+| Name | Type | Required | Default | Description |
+|---|---|---|---|---|
+| entity_id | entityId | no | — | Target entity ID (default: possessed) |
+| action | string | no | get | get (default), add, change, remove |
+| id | name | no | — | Specific feature ID to apply (for add/change). Omit for random. |
+
+Usage
+==
+
+```js
+await inzoi.cli.execute('appearance.scar', {
+  entity_id: 0, // optional
+  action: 'get', // optional
+  id: '', // optional
+});
+```

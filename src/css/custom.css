@@ -1,0 +1,31 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+/* Indigo primary to roughly match the previous MkDocs Material palette. */
+:root {
+  --ifm-color-primary: #3f51b5;
+  --ifm-color-primary-dark: #3949ab;
+  --ifm-color-primary-darker: #3645a1;
+  --ifm-color-primary-darkest: #2d3984;
+  --ifm-color-primary-light: #5060be;
+  --ifm-color-primary-lighter: #5b6ac2;
+  --ifm-color-primary-lightest: #7a86cf;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #9fa8da;
+  --ifm-color-primary-dark: #8591d2;
+  --ifm-color-primary-darker: #7986cb;
+  --ifm-color-primary-darkest: #5c6bc0;
+  --ifm-color-primary-light: #b9bfe2;
+  --ifm-color-primary-lighter: #c5cae9;
+  --ifm-color-primary-lightest: #e8eaf6;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}

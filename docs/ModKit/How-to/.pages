@@ -1,0 +1,9 @@
+# docs/Modkit/How-to/.pages 파일
+nav:
+  - Getting Started: Getting-Started
+  - CAZ: CAZ
+  - Build: Build
+  - InZOI Modkit Tutorial: InZOI Modkit Tutorial
+  - Advanced Guides: AdvancedGuides
+  - Animation : Animation
+  - Object Sound: Object Sound

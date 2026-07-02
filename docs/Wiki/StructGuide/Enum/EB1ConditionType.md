@@ -1,0 +1,236 @@
+## 🧩 Enum: EB1ConditionType
+
+Defines all condition types used throughout the game for scripting, interaction validation, logic evaluation, and more.
+
+### Scripting, interaction validation, logic evaluation, and more.
+
+- **Invalid**: Represents an invalid or undefined condition.
+- **None**: No condition to evaluate.
+- **Fail**: Always fails the condition.
+- **Stat**: Compares a specified stat (uses Stat.Id).
+- **ObjectCategory**: Checks object category (Object.ObjectCategory).
+- **HandCarriedObjectType**: Compares type of object in hand.
+- **HandCarriedObjectId**: Checks if carried object matches specified ID (Object_*.Id).
+- **HandCarriedObjectTag**: Matches tag on carried object.
+- **HasCarriedObject**: Checks if character is carrying anything.
+- **HasObjectTag**: Checks if object or template has a matching tag.
+- **HasFood**: Checks if character has a food item.
+- **Buff**: Checks for presence of specific buff (Buff.Id).
+- **BuffTag**: Checks for buff with specified tag (Buff.BuffBasicInfo.Tags).
+- **Posture**: Matches character posture.
+- **State**: Compares character state.
+- **Emotion**: Emotion ID check (Emotion.Id).
+- **EmotionValue**: Emotion value check (Emotion.Id).
+- **EmotionLevel**: Compares emotion level (Emotion.Id).
+- **OwnedEmotionLevel**: Checks emotion level of owned emotion (Emotion.Id).
+- **EmotionTendency**: Compares emotional tendency (Emotion.Tendency).
+- **Skill**: Checks skill possession (Skill.Id).
+- **SkillUp**: Checks skill increase (Skill.Id).
+- **RelationshipStat**: Compares relationship stat (RelationshipStat.Id).
+- **RelationshipStatRange**: Checks if relationship stat falls within a range.
+- **RelationshipName**: Checks for relationship name (Relationship.Id).
+- **HasRelationship**: Verifies any relationship exists.
+- **HasRelationshipName**: Checks for specific relationship name (Relationship.Id).
+- **HasRelationshipRecord**: Checks if a relationship record exists (RelationshipRecord.Id).
+- **IsRelationshipFocusSelection**: Checks for focused relationship selection (RelationshipStat.Id).
+- **InteractionName**: Checks for interaction ID (Interaction.Id).
+- **InteractionTag**: Matches interaction tag.
+- **InteractionBagTag**: Matches interaction bag tag (InteractionBag.InteractionBagTags).
+- **Trait**: Checks for specific trait (Trait.Id).
+- **TraitGroup**: Checks for trait group membership (TraitGroup.Id).
+
+### Gameplay logic evaluation
+
+- **TargetDistance**: Compares distance to target.
+- **NumberOfZOI**: Checks number of Zones of Influence (ZOI).
+- **InteractionObjectRange**: Checks interaction object range (InteractionBag.Id).
+- **InteractionTargetIsOwner**: True if interaction target is the owner.
+- **GrowthStep**: Checks character's growth stage.
+- **IsChildAllowedInWorld**: Verifies if child characters are allowed.
+- **CanPregnancy**: Checks if character can become pregnant.
+- **IsPregnancyState**: Checks if character is currently pregnant.
+- **IsLovable**: Determines if a character is eligible for romance.
+- **Chemistry**: Compares chemistry value (TraitChemistryReward_* via RelationshipStat.Id).
+- **CanMarry**: Checks if character is eligible for marriage.
+- **CanMarrySuccess**: Determines if marriage can succeed.
+- **OccupyingSlotByPosture**: Checks posture used to occupy slot (Posture.PostureType).
+- **OccupyingConnectedChairByPosture**: Checks posture used to occupy connected chair.
+- **Gender**: Compares character gender.
+- **GenderCompWithTarget**: Compares gender compatibility with target.
+- **ActionTimeId**: Matches action time slot (Action_Interaction.Id).
+- **ActionTimeTag**: Matches action time tag (Action_Interaction.ActionTags).
+- **CompleteAmbition**: Checks if ambition is completed (AmbitionItem.Id).
+- **PlayingAmbition**: Checks if ambition is currently playing (AmbitionItem.Id).
+- **CurrentAmbition**: Checks current ambition state (AmbitionItem.Id).
+- **HasJob**: Checks if character has a job (Job.Id).
+- **ComparePreviousJobRank**: Compares previous job rank with current (Company.Id, Job.Id).
+- **IsWorking**: Checks if character is working.
+- **HasHome**: Checks if character owns or is assigned a home.
+- **IsLocatedSameSite**: Verifies if two entities are in the same site.
+- **Site**: Compares with specific site (Site.Id).
+- **SiteByImpactPoint**: Checks which site contains impact point (Site.Id).
+- **Time**: Compares current in-game time.
+- **TimeRange**: Checks if time falls within a specified range.
+
+### Outfits, scheduling, family, and character roles.
+
+- **Costume**: Checks worn costume ID (Costume.Id).  
+- **OutfitCategory**: Matches the category of current outfit.  
+- **OutfitGarmentTag**: Checks garment tags in current outfit (`Garment*.OutfitCategoryTags` or `Garment*Mesh.Tags`).  
+- **HasOutfitGarmentType**: Checks for specific type of outfit garment.  
+- **HasOutfitAccessoryType**: Checks for specific type of accessory.  
+- **DayOfTheWeek**: Compares current day of the week.  
+- **IsWeekday**: True if today is a weekday.  
+- **IsWeekend**: True if today is a weekend.  
+- **IsFamilyRelationship**: Checks if target is in family relationship.  
+- **HasFamilyRelationship**: Verifies existence of a family relationship.  
+- **IsNumberOfRelatives**: Compares number of relatives.  
+- **IsFamilyAgeRank**: Compares age rank within family.  
+- **IsFullFamilyMembers**: Checks if family has all required members.  
+- **IsHouseMate**: True if character is a housemate.  
+- **IsCohabitable**: Checks if cohabitation is allowed (RelationshipStat.Id).  
+- **JobEmploymentDay**: Checks how long character has been employed.  
+- **JobRank**: Compares current job rank.  
+- **JobRankCompWithTarget**: Compares job rank with target.  
+- **IsSiteScheduleNPC**: True if NPC is assigned via site schedule.  
+- **EnteredSiteType**: Checks the type of recently entered site.  
+- **IsHome**: True if character is currently at home.  
+- **IsPlayerFamily**: True if character is in player's family.  
+- **IsPlayerFamilyTree**: True if character is in player's family tree.  
+- **IsPlayerFamilyAndFamilyTree**: True if in both player’s family and tree.  
+- **IsPlayerFamilyOrFamilyTree**: True if in either player’s family or tree.  
+- **IsPlayerCharacter**: True if character is player-controlled.  
+- **IsPlayerCharacterSelfOrTarget**: True if self or target is a player character.  
+- **IsNpcCharacter**: Checks if character is an NPC.  
+- **IsCharacterRole**: Checks assigned character role.  
+
+### Preferences, timelines, vehicles, cities, and rumors.
+
+- **HasPreference**: Checks if character has the specified preference (Preference.Id).  
+- **IsPreferenceLike**: True if character likes the given preference (Preference.Id).  
+- **ComparePreference**: Compares preference level or value.  
+- **RelationshipFamilyLove**: Compares level of family love relationship stat.  
+- **HasRelationshipFamilyLove**: Checks for presence of family love relationship.  
+- **IsVisitingFriend**: True if character is visiting a friend.  
+- **HasOverrideTimeline**: Checks if timeline override exists (Timeline_Event.Id).  
+- **IsGiftBoxOwner**: True if character owns the gift box.  
+- **GiftBoxTendency**: Checks tendency score related to gifts.  
+- **DustyValue**: Compares dustiness or dirt level.  
+- **IsInVehicle**: Checks if character is currently inside a vehicle.  
+- **IsVehicle**: Checks if the target is a vehicle.  
+- **IsVehicleInAutoDriving**: True if vehicle is auto-driving.  
+- **IsDriver**: True if character is currently the driver.  
+- **IsVehicleDriving**: True if vehicle is actively moving.  
+- **IsVehicleSeatOccupied**: Checks if a specific seat is taken.  
+- **IsAnyVehicleSeatOccupied**: Checks if any seat is occupied.  
+- **IsVehicleLightsOn**: True if lights are on.  
+- **IsWaitingForPassenger**: Vehicle is waiting for passenger pickup.  
+- **IsOwnedVehicle**: Vehicle is owned by character.  
+- **VehicleSpeed**: Compares current vehicle speed.  
+- **HasOwnedVehicle**: Checks if character owns any vehicle.  
+- **IsVehicleInParkingPlace**: True if vehicle is parked properly.  
+- **IsReachableUsingVehicle**: True if target can be reached via vehicle.  
+- **IsIndoor**: Checks whether character is currently indoors.  
+- **CanGreetCustomer**: Determines if character can greet customer.  
+- **IsChangeableState**: Checks if state change is allowed.  
+- **City**: Compares character’s city ID (Map.Id).  
+- **NearestCityGraphPointDistance**: Compares distance to nearest city path point.  
+- **IsSiteHasObjectTemplateTag**: Checks if site contains specific object template tag.  
+- **IsCompanyEmployee**: True if character is an employee.  
+- **CheckHowlingTaken**: Checks if a howling effect has been applied (Howling.Id).  
+
+### Events, inventory, rumors, ghosts, and more.
+
+- **OwnedVehicleSpawned**: Checks if owned vehicle is currently spawned.  
+- **VehiclePartState**: Compares a specific part's state in the vehicle.  
+- **IsOwnerSitInDriverSeat**: True if vehicle owner is seated as driver.  
+- **CharacterGroupType**: Compares the group type the character belongs to.  
+- **IsCarriableObject**: True if object is carriable.  
+- **ObjectSize**: Compares physical size of the object.  
+- **MainPerspective**: Checks character’s primary perspective trait (TraitValue.Id).  
+- **PerspectivePoint**: Compares perspective score (TraitValue.Id).  
+- **PerspectivePointDiff**: Compares perspective point difference (TraitValue.Id).  
+- **IsWorkingDayOfWeek**: True if today is a scheduled workday.  
+- **WithinJob**: Checks if current activity is within job context.  
+- **HasJobType**: Compares character's job type.  
+- **ForTimeSite**: Checks conditions for a specific time-based site (Site.Id).  
+- **HaveCurrency**: Checks if character has any amount of currency.  
+- **SiteCleanliness**: Compares site's cleanliness level.  
+- **HomeCleanliness**: Compares home's cleanliness level.  
+- **EnteredSiteHasTag**: Checks if recently entered site has the given tag (Site.DefaultInfo.Tags).  
+- **Season**: Checks current season.  
+- **Weather**: Checks current weather type.  
+- **TemperatureRange**: Checks if temperature is within a certain range.  
+- **IsInInventory**: Checks if object is inside character’s inventory.  
+- **HasEntityTag**: Checks if character has the specified entity tag.  
+- **IsLocateSiteInBaby**: Checks if site is marked as “baby allowed.”  
+- **IsLocateSiteOnFire**: Checks if current site is on fire.  
+- **HasRumor**: Checks if the character holds a specific rumor (Rumor.Id).  
+- **IsSameRumor**: Checks if another character has the same rumor.  
+- **HasRumorValidIndex**: Checks if rumor has a valid index value.  
+- **HasSameRumorInIndex**: Compares rumor index between two characters.  
+- **CanRumorTransfer**: True if rumor can be transferred to another character.  
+- **IsGhostCharacter**: Checks if character is in ghost state.  
+
+### Romance, interaction permissions, body states, and advanced logic
+
+- **RomanticOrientation**: Compares character’s romantic orientation.  
+- **IsMatchingRomanceTarget**: Checks if character matches romantic criteria.  
+- **IsInSiteWithInTime**: Checks if character entered a specific site within time (Site.Id).  
+- **HasPutableObjectOnHand**: Checks if character is holding an object that can be placed.  
+- **IsSiteOnFire**: Checks if the site is currently burning.  
+- **CanBecomeGhost**: Determines if character is eligible to become a ghost.  
+- **IsProfileLocked**: Checks if the character's profile is locked.  
+- **HasEnoughCurrency**: Verifies if character has enough of a specific currency (Currency.Id).  
+- **HasTaxId**: Checks if object has an associated tax ID (Object.TaxId).  
+- **IsForceableSale**: Determines if forced sale is permitted.  
+- **IsSeized**: Checks if object has been seized.  
+- **IsElectricityCutoffSite**: Checks if site has power cutoff.  
+- **IsWaterCutoffSite**: Checks if site has water cutoff.  
+- **IsCrafting**: Checks if crafting is currently in progress.  
+- **HasObjectInCraftingSlot**: Checks if an object exists in the crafting slot.  
+- **IsObjectAuthor**: Checks if character is the author of the object.  
+- **CraftingPlaySuccessAnimation**: Triggers success animation for crafting.  
+- **CraftingPlayIdleAnimation**: Plays idle animation during crafting.  
+- **Quality**: Compares object or content quality.  
+- **RelationshipDeviation**: Compares deviation in relationship stat (RelationshipStat.Id).  
+- **HasSalesRights**: Checks if character can sell items.  
+- **HasEnoughCurrencyTarget**: Checks if the target has enough currency.  
+- **HasEnoughCurrencyExchangeCost**: Validates if exchange cost can be paid.  
+- **HasEnoughCurrencyExchangeCostInSite**: Same as above, scoped to current site.  
+- **IsPlayingSiteEvent**: Checks if currently participating in a site or social event.  
+- **IsSiteEventRole**: Verifies role participation in event (SocialEventTemplate or SiteEvent RoleInfos).  
+- **IsSocialEventMeeting**: Checks if current event is a social meeting.  
+- **IsGraduationRank**: Checks graduation rank condition.  
+- **IsSameSite**: Compares current site with another.  
+- **IsSameSiteEvent**: Compares if participating in the same site event.  
+- **IsSameSiteEventRole**: Compares roles within the same event.  
+- **CanAddObjectToBag**: Checks if object can be added to bag (Object_*.Id).  
+- **CanAddObjectTemplateToBag**: Same check, using template ID.  
+- **HasItemObjectToInventory**: Checks if inventory has a specific object (Object.Id).  
+- **HasItemObjectTemplateToInventory**: Checks inventory for template-matching object.  
+- **IsInSameFamilyTree**: Checks if characters belong to the same family tree.  
+- **IsFamilyHead**: True if character is head of family.  
+- **ObjectPrice**: Compares the price of an object.  
+- **HasGeneratedMotionIndex**: Checks if motion generation has occurred.  
+- **EnableGenerateMotion**: Verifies if motion generation is allowed.  
+- **GiftType**: Checks type of gift.  
+- **CheckGhostInteractionReason**: Compares reason for ghost-specific interaction.  
+- **HasCeiling**: Checks for ceiling presence.  
+- **HasCeilingByImpactPoint**: Same check using hit point.  
+- **HasFloor**: Checks for floor presence.  
+- **HasFloorByImpactPoint**: Same check using hit point.  
+- **ObjectWeathering**: Compares wear/deterioration of an object.  
+- **IsBabyBeingHeld**: Checks if baby character is currently being held.  
+- **PurchaseSuccessBaseOnPrice**: Calculates purchase success probability using price.  
+- **StealSuccessBaseOnPrice**: Calculates steal success probability using price.  
+- **IsPurchasable**: Checks if item is available for purchase.  
+- **IsFavoriteObject**: Checks if item is marked as a favorite.  
+- **HasOverrideSkin**: Checks if character has custom override skin applied.  
+- **HasOverrideSkinColor**: Checks for skin color override.  
+- **Muscle**: Compares character’s muscularity level.  
+- **Obesity**: Compares character’s obesity level.  
+- **CheckDiceWithRoll**: Performs dice check with predefined roll.  
+- **CheckDice**: Performs a general dice check.  
+- **LastContactHour**: Checks how long ago last contact occurred.  
+- **IsPossessedFamilyToday**: Checks if character was possessed by family today.  
